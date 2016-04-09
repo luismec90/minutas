@@ -19,6 +19,11 @@ class MinutasController extends Controller
 
     public function generate(Request $request)
     {
+        $this->validate($request, [
+            'word' => 'required|file',
+            'excel' => 'required|file',
+        ]);
+
         $data = Excel::load($request->file('excel'), function ($reader) {
             $reader->toArray();
         })->get();

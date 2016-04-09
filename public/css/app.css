@@ -320,10 +320,8 @@ footer p a:hover {
     color: #555a78;
 }
 footer p.foo_address {
-    background: url(../img/marker.png) left 7px no-repeat;
     float: right;
     padding-left: 33px;
-    margin-top: -8px;
     display: inline-block;
 }
 footer em {
