@@ -117,7 +117,7 @@
                     <div class="thumbnail">
                         <div class="caption">
                             <p class="title">Archivo Word</p>
-                            <p>El primer paso es crear la minuta en formato Word. Luego debes reescribir los datos que varia de la siguiente manera: ${nombre_del_campo}</p>
+                            <p>El primer paso es crear la minuta en formato Word. Luego debes reescribir los datos que varia de la siguiente manera: <b>${nombre_del_campo}</b></p>
                             <a href="/archivo_ejemplo.docx" class="btn-default btn1">Descargar Word de ejemplo</a>
                         </div>
                     </div>

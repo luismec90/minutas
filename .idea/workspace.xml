@@ -60,14 +60,14 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+            <state relative-caret-position="273">
+              <caret line="119" column="175" selection-start-line="119" selection-start-column="175" selection-end-line="119" selection-end-column="175" />
               <folding>
-                <marker date="1460243270198" expanded="true" signature="942:959" placeholder="..." />
-                <marker date="1460243270198" expanded="true" signature="960:1368" placeholder="..." />
-                <marker date="1460243270198" expanded="true" signature="963:1357" placeholder="..." />
-                <marker date="1460243270198" expanded="true" signature="1087:1353" placeholder="..." />
-                <marker date="1460243270198" expanded="true" signature="7674:10451" placeholder="..." />
+                <marker date="1460243337474" expanded="true" signature="942:959" placeholder="..." />
+                <marker date="1460243337474" expanded="true" signature="960:1368" placeholder="..." />
+                <marker date="1460243337474" expanded="true" signature="963:1357" placeholder="..." />
+                <marker date="1460243337474" expanded="true" signature="1087:1353" placeholder="..." />
+                <marker date="1460243337474" expanded="true" signature="7681:10458" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -297,7 +297,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1460219169137</updated>
-      <workItem from="1460219170271" duration="18524000" />
+      <workItem from="1460219170271" duration="18588000" />
     </task>
     <task id="LOCAL-00001" summary="Mejoras">
       <created>1460219545847</created>
@@ -317,7 +317,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18524000" />
+    <option name="totallyTimeSpent" value="18588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -507,14 +507,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+        <state relative-caret-position="273">
+          <caret line="119" column="175" selection-start-line="119" selection-start-column="175" selection-end-line="119" selection-end-column="175" />
           <folding>
-            <marker date="1460243270198" expanded="true" signature="942:959" placeholder="..." />
-            <marker date="1460243270198" expanded="true" signature="960:1368" placeholder="..." />
-            <marker date="1460243270198" expanded="true" signature="963:1357" placeholder="..." />
-            <marker date="1460243270198" expanded="true" signature="1087:1353" placeholder="..." />
-            <marker date="1460243270198" expanded="true" signature="7674:10451" placeholder="..." />
+            <marker date="1460243337474" expanded="true" signature="942:959" placeholder="..." />
+            <marker date="1460243337474" expanded="true" signature="960:1368" placeholder="..." />
+            <marker date="1460243337474" expanded="true" signature="963:1357" placeholder="..." />
+            <marker date="1460243337474" expanded="true" signature="1087:1353" placeholder="..." />
+            <marker date="1460243337474" expanded="true" signature="7681:10458" placeholder="..." />
           </folding>
         </state>
       </provider>
