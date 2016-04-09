@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Minutas.co - Herramienta para la generación de minutas de forma automática</title>
+    <title>Minutas.co - Herramienta para la generación de minutas, certificados y todo tipo de formatos de manera masiva.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
@@ -22,8 +22,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Herramienta para la generación de minutas de forma automática">
-    <meta name="keywords" content="minutas, generación, plantillas, formatos, automáticamente">
+    <meta name="description" content="Herramienta para la generación de minutas, certificados y todo tipo de formatos de manera masiva">
+    <meta name="keywords" content="minutas, generación, plantillas, formatos, automáticamente, generar,  formatos,manera masiva">
     <meta name="author" content="Luis Montoya">
 
     <!--CSS-->
@@ -53,8 +53,7 @@
 <div class="bg_pic">
     <div class="container">
         <p id="main-title" class="title wow fadeInDown" data-wow-delay="0.2s">MINUTAS.CO</p>
-        <p class="description wow fadeInUp"><i></i>Herramienta para la generación de minutas de forma
-            automática<em></em></p>
+        <p class="description wow fadeInUp"><i></i>Herramienta para la generación de minutas, certificados y todo tipo de formatos de manera masiva<em></em></p>
         <div id="div-form-minutas" class="row">
             <form id="form-minutas" action="/generate" role="form" class="col-md-8 col-md-offset-2" method="POST"
                   enctype="multipart/form-data">
@@ -168,7 +167,7 @@
     <div class="thumb-box1">
         <div class="container">
             <h2 class="center">Contáctenos</h2>
-            <p class="center">Por favor siéntase libre de enviarme cualquier duda o sugerencia </p>
+            <p class="center">Siéntase libre de enviarnos cualquier duda o comentario</p>
             <div class="row">
                 <div class="col-lg-12">
                     <form id="contact-form" class="col-sm-12 contact-form" action="/contact" method="post">
