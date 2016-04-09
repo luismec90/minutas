@@ -26,7 +26,7 @@ class MinutasController extends Controller
         $i = 1;
 
         $path = "minutas_tmp/tmp_" . time();
-        mkdir($path);
+        mkdir($path,0777, true);
 
         foreach ($data as $row) {
             $template = $request->file('word');
