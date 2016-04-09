@@ -132,7 +132,7 @@
                     <div class="thumbnail">
                         <div class="caption">
                             <p class="title">Archivo Word</p>
-                            <p>El primer paso es crear la minuta en formato Word. Luego debes reescribir los datos que varia de la siguiente manera: <b>${nombre_del_campo}</b></p>
+                            <p>El primer paso es crear la minuta en formato Word. Luego debes reescribir los datos que varian de la siguiente manera: <b>${nombre_del_campo}</b></p>
                             <a href="/archivo_ejemplo.docx" class="btn-default btn1">Descargar Word de ejemplo</a>
                         </div>
                     </div>
@@ -155,8 +155,8 @@
                     <div class="badge">3</div>
                     <div class="thumbnail">
                         <div class="caption">
-                            <p class="title">Adjunar archivos</p>
-                            <p>Luego detener los dos archivos requeridos estos se deben adjuntar en el formulario, y proceder a enviarlo. Luego de procesar los datos el sistema genera un link de descarga. </p>
+                            <p class="title">Adjuntar archivos</p>
+                            <p>Luego de tener los dos archivos requeridos estos se deben adjuntar en el formulario, y proceder a enviarlo. Luego de procesar los datos el sistema genera un link de descarga. </p>
                             <a href="#main-title" class="btn-default btn1">Ir al formulario</a>
                         </div>
                     </div>
