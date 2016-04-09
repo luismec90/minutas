@@ -37,17 +37,16 @@
 <div class="bg_pic">
     <div class="container">
         <p class="title wow fadeInDown" data-wow-delay="0.2s">MINUTAS.CO</p>
-        <p class="description wow fadeInUp"><i></i>Herramienta para la generación de minutas de forma automática<em></em></p>
-        <div id="div-form-minutas" class="row" >
+        <p class="description wow fadeInUp"><i></i>Herramienta para la generación de minutas de forma
+            automática<em></em></p>
+        <div id="div-form-minutas" class="row">
             <form id="form-minutas" action="/generate" role="form" class="col-md-8 col-md-offset-2" method="POST"
                   enctype="multipart/form-data">
                 {{ csrf_field() }}
 
-                {!!  var_dump(session()->all()) !!}
                 @if(session()->has('link'))
                     <br>
                     <br>
-                sdfsd
                     <div class="row">
                         <div class="alert alert-success">
                             Archivos generados exitosamente. <a href="/{{ session()->get('link') }}" target="_blank">Descargar</a>
