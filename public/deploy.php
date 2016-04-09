@@ -1,3 +1,3 @@
 <?php
 
-echo shell_exec('cd /var/www/minutas; git reset --hard HEAD; git pull;');
+echo shell_exec('cd /var/www/minutas; sudo git reset --hard HEAD; sudo git pull;');
