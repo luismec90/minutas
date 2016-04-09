@@ -4,8 +4,7 @@
     <title>Minutas.co - Herramienta para la generación de minutas de forma automática</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
     <meta name="description" content="Herramienta para la generación de minutas de forma automática">
     <meta name="keywords" content="minutas, generación, plantillas, formatos, automáticamente">
     <meta name="author" content="Luis Montoya">
