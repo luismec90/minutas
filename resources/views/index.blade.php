@@ -203,7 +203,7 @@
 <footer>
     <div class="container">
         <p>MINUTAS.CO &copy; <em id="copyright-year"></em></p>
-        <p class="foo_address">  <a href="mailto:me@luisfer.co">me@luisfer.co</a></p>
+        <p class="foo_address">Soporte técnico:  <a href="mailto:me@luisfer.co">me@luisfer.co</a></p>
     </div>
 </footer>
 
