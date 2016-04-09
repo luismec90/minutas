@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::group(['middleware' => 'web'], function () {
     Route::get('/', 'MinutasController@index');
     Route::post('/generate', 'MinutasController@generate');
 });
