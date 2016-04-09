@@ -180,7 +180,7 @@
                     <form id="newsletter" accept-charset="utf-8">
                         <div class="success">Your subscribe request has been sent!</div>
                         <label class="email">
-                            <input type="email" value="Enter Your E-mail:">
+                            <input type="email" value="" placeholder="Enter Your E-mail:">
                             <span class="error">*This is not a valid email address.</span>
                         </label><br>
                         <a href="#" data-type="submit">Subscribe</a>
