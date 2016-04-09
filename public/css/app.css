@@ -65,7 +65,7 @@ h4 {
     overflow: hidden;
 }
 .global {
-    padding: 107px 0 0 0;
+    padding: 40px 0 0 0;
     background: #f2f2f2;
 }
 .global.indent {
@@ -387,7 +387,7 @@ footer span {
     position: relative;
     z-index: 0;
     overflow: hidden;
-    padding: 50px 0 178px 0;
+    padding: 50px 0 50px 0;
     width: 100%;
     text-align: center;
     background: #f2f2f2 url(../img/bg.jpg) no-repeat center center fixed;
@@ -1573,4 +1573,106 @@ margin-top: 20px;
     left: 50%;
     margin-top: -32px;
     margin-left: -32px;
+}
+
+#success-message{
+    text-align: center;
+}
+#success-message .alert-success{
+
+
+}
+#success-message h3{
+    margin: 0;
+}
+
+.badge{
+    font-size:50px;
+}
+
+#steps h2{
+    margin-bottom: 70px;
+}
+
+/* [CTS] CONTACT SECTION */
+.contact {
+    padding-bottom: 0;
+}
+
+.contact-inner {
+    text-align: center;
+}
+
+.contact-wrap {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #eee;
+}
+
+.contact-wrap span {
+    display: block;
+}
+
+.contact-form {
+    overflow: auto;
+}
+
+.contact-form .form-group {
+    position: relative;
+}
+
+.contact-reset {
+    display: none;
+    margin-right: 20px;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s
+}
+
+.success-mark,
+.error-mark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -12px;
+    opacity: 0;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s
+}
+
+.success-mark {
+    color: #47a447;
+}
+
+.error-mark {
+    color: #d2322d;
+}
+
+.contact-notif {
+    width: 500px;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+    background: #eee;
+    padding: 10px 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    opacity: 0.75;
+    display: none
+}
+
+.contact-notif.success {
+    color: #47a447;
+    background: #dff0d8;
+}
+
+.contact-notif.error {
+    color: #d2322d;
+    background: #f2dede;
 }

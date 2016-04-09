@@ -36,7 +36,7 @@
 
 <div class="bg_pic">
     <div class="container">
-        <p class="title wow fadeInDown" data-wow-delay="0.2s">MINUTAS.CO</p>
+        <p id="main-title" class="title wow fadeInDown" data-wow-delay="0.2s">MINUTAS.CO</p>
         <p class="description wow fadeInUp"><i></i>Herramienta para la generación de minutas de forma
             automática<em></em></p>
         <div id="div-form-minutas" class="row">
@@ -44,14 +44,38 @@
                   enctype="multipart/form-data">
                 {{ csrf_field() }}
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 @if(session()->has('link'))
                     <br>
-                    <br>
-                    <div class="row">
+                    <div id="success-message" class="row">
                         <div class="alert alert-success">
-                            Archivos generados exitosamente. <a href="/{{ session()->get('link') }}" target="_blank">Descargar</a>
+                           <h3>
+                               Archivos generados exitosamente. <a href="/{{ session()->get('link') }}" target="_blank">Descargar</a>
+                           </h3>
                         </div>
                     </div>
+                    <br>
+                @endif
+
+                @if(session()->has('emailSent'))
+                    <br>
+                    <div id="success-message" class="row">
+                        <div class="alert alert-success">
+                           <h3>
+                               Hemos recibido tu mensaje, muchas gracias por escribirnos.
+                           </h3>
+                        </div>
+                    </div>
+                    <br>
                 @endif
                 <div class="form-group">
                     <label for="name">Plantilla en formato Word</label>
@@ -84,43 +108,41 @@
 </div>
 <div class="global">
     <!--content-->
-    <div class="container">
+    <div id="steps" class="container">
+        <h2  class="center">Forma de uso</h2>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="thumb-pad1 maxheight wow fadeIn">
-                    <div class="badge"><img src="/img/page1_icon1.png" alt=""></div>
+                    <div class="badge">1</div>
                     <div class="thumbnail">
                         <div class="caption">
-                            <p class="title">Progressive Programs</p>
-                            <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut
-                                neque purus, sollic alitudin non ante ac, malesuada. condimentum libero. </p>
-                            <a href="#" class="btn-default btn1">Read More</a>
+                            <p class="title">Archivo Word</p>
+                            <p>El primer paso es crear la minuta en formato Word. Luego debes reescribir los datos que varia de la siguiente manera: ${nombre_del_campo}</p>
+                            <a href="/archivo_ejemplo.docx" class="btn-default btn1">Descargar Word de ejemplo</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                 <div class="thumb-pad1 maxheight">
-                    <div class="badge"><img src="/img/page1_icon2.png" alt=""></div>
+                    <div class="badge">2</div>
                     <div class="thumbnail">
                         <div class="caption">
-                            <p class="title">online education</p>
-                            <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut
-                                neque purus, sollic alitudin non ante ac, malesuada. condimentum libero. </p>
-                            <a href="#" class="btn-default btn1">Read More</a>
+                            <p class="title">Archivo Excel</p>
+                            <p>El propósito de este archivo es tener todos los datos que van a alimentar el archivo en Word. Cada columna debe tener igual número de variables definida en el archivo Word.  Y el nombre de cada una de ellas debe ser el nombre dado a la variable en el archivo Word.</p>
+                            <a href="/archivo_ejemplo.docx" class="btn-default btn1">Descargar Excel de ejemplo</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.2s">
                 <div class="thumb-pad1 maxheight">
-                    <div class="badge"><img src="/img/page1_icon3.png" alt=""></div>
+                    <div class="badge">3</div>
                     <div class="thumbnail">
                         <div class="caption">
-                            <p class="title">International students</p>
-                            <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut
-                                neque purus, sollic alitudin non ante ac, malesuada. condimentum libero. </p>
-                            <a href="#" class="btn-default btn1">Read More</a>
+                            <p class="title">Adjunar archivos</p>
+                            <p>Luego detener los dos archivos requeridos estos se deben adjuntar en el formulario, y proceder a Enviarlo. Luego de procesar los datos el sistema genera un link de descarga. </p>
+                            <a href="#main-title" class="btn-default btn1">Ir al formulario</a>
                         </div>
                     </div>
                 </div>
@@ -129,98 +151,40 @@
     </div>
     <div class="thumb-box1">
         <div class="container">
-            <h2 class="center">For students:</h2>
-            <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula
-                sagittis faucibus eget quis lacus. <br>Suspendisse sodales sed orci ac feugiat. </p>
+            <h2 class="center">Contáctenos</h2>
+            <p class="center">Por favor siéntase libre de enviarme cualquier duda o sugerencia </p>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="thumb-pad2 wow fadeInRight">
-                        <figure><img src="/img/page1_pic1.jpg" alt=""></figure>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <h3>Attendance procedure</h3>
-                                <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut
-                                    neque purus, sollic alitudin non ante ac, malesuada. condimentum libero.</p>
-                                <a href="#" class="btn-default btn1">Read More</a>
+                <div class="col-lg-12">
+                    <form id="contact-form" class="col-sm-12 contact-form" action="/contact" method="post">
+                        {{ csrf_field() }}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="sr-only"></label>
+                                    <input id="name" name="name" class="form-control" placeholder="Nombre" type="text" required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only"></label>
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="Email" required="required">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="thumb-pad2 wow fadeInRight" data-wow-delay="0.2s">
-                        <figure><img src="/img/page1_pic2.jpg" alt=""></figure>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <h3>Health & Help</h3>
-                                <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut
-                                    neque purus, sollic alitudin non ante ac, malesuada. condimentum libero.</p>
-                                <a href="#" class="btn-default btn1">Read More</a>
-                            </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control required parsley-validated" rows="8" placeholder="Mensaje" required="required" required="required"></textarea>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="thumb-pad2 wow fadeInRight" data-wow-delay="0.4s">
-                        <figure><img src="/img/page1_pic3.jpg" alt=""></figure>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <h3>Course Selection</h3>
-                                <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut
-                                    neque purus, sollic alitudin non ante ac, malesuada. condimentum libero.</p>
-                                <a href="#" class="btn-default btn1">Read More</a>
-                            </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success pull-right">Enviar</button>
+                            <a href="#" class="btn btn-danger pull-right contact-reset">Limpiar</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="thumb-box2 center">
-        <div class="container">
-            <h2 class="center">Current news:</h2>
-            <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula
-                sagittis faucibus eget quis lacus. <br>Suspendisse sodales sed orci ac feugiat. </p>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12 date-box wow fadeInLeft" data-wow-delay="0.2s">
-                    <div>
-                        <div class="badge">
-                            22 <span>jun</span>
-                            <strong>6 <img src="/img/page1_icon4.png" alt=""></strong>
-                        </div>
-                        <div class="extra-wrap">
-                            <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari
-                                dghus elit, a commodo libero dicuij futumty pottor estibulum egestas egestas erat et
-                                iaculis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                    <figure><img src="/img/page1_pic4.jpg" alt=""></figure>
-                </div>
-            </div>
-            <a href="#" class="btn-default btn1">view more news</a>
-        </div>
-    </div>
-    <div class="thumb-box3">
-        <div class="container">
-            <h2 class="wow fadeInUp">newsletter sign up</h2>
-            <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque
-                ligula sagittis faucibus eget quis lacus. <br>Suspendisse sodales sed orci ac feugiat. </p>
-            <div class="row">
-                <div class="col-lg-12 wow fadeInUp">
-                    <form id="newsletter" accept-charset="utf-8">
-                        <div class="success">Your subscribe request has been sent!</div>
-                        <label class="email">
-                            <input type="email" value="" placeholder="Enter Your E-mail:">
-                            <span class="error">*This is not a valid email address.</span>
-                        </label><br>
-                        <a href="#" data-type="submit">Subscribe</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!--footer-->
 <footer>
     <div class="container">
@@ -234,35 +198,18 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="/js/app.js"></script>
+
 <script>
-    $(function () {
-        $('.btn-file-input :file').change(function () {
-            var input = $(this);
-            var label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-            input.parent().parent().siblings("input").val(label);
-        });
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        $('#form-minutas').on('submit', function () {
-            coverOn();
-        });
-    });
-
-    function coverOn() {
-        $("#cover-display").css({
-            "opacity": "1",
-            "width": "100%",
-            "height": "100%"
-        });
-    }
-
-    function coverOff() {
-        $("#cover-display").css({
-            "opacity": "0",
-            "width": "0",
-            "height": "0"
-        });
-    }
+    ga('create', 'UA-42717766-8', 'auto');
+    ga('send', 'pageview');
 
 </script>
+
 </body>
 </html>

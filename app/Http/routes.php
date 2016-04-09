@@ -11,7 +11,8 @@
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middlewareGroups' => ['web']], function () {
     Route::get('/', 'MinutasController@index');
     Route::post('/generate', 'MinutasController@generate');
+    Route::post('/contact', 'MinutasController@mail');
 });
