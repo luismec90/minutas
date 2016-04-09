@@ -387,10 +387,14 @@ footer span {
     position: relative;
     z-index: 0;
     overflow: hidden;
-    padding: 273px 0 178px 0;
+    padding: 50px 0 178px 0;
     width: 100%;
     text-align: center;
-    background: #f2f2f2 url(../img/bg_pic1.jpg) left top fixed no-repeat;
+    background: #f2f2f2 url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .bg_pic .title {
     color: #ffffff;
@@ -1490,4 +1494,83 @@ footer span {
 /*-------------------------------------------------*/
 /*-------------------------------------------------*/
 /*-------------------------------------*/
-s
+.btn-file {
+    cursor: pointer;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 155px;
+    height: 34px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    display: block;
+    cursor: pointer;
+}
+
+#cover-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #444;
+    background: rgba(68, 68, 68, 0.95);
+    overflow: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 1500;
+}
+
+#img-loading {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+}
+#div-form-minutas{
+    color:#fff;
+    text-align: left;
+    margin-top: 30px;
+    padding-top:40px;
+    background: rgba(0, 0, 0, .5);
+}
+.btn,.form-control {
+    border-radius: 2px;
+}
+.btn-primary{
+    background: #b93a41;
+    border-color: #9b3136;
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{
+    background: #c85157 !important;
+     border-color: #9b3136 !important;
+}
+ #btn-generate-minutas{
+margin-top: 20px;
+     width: 200px;
+ }
+#cover-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #444;
+    background: rgba(68, 68, 68, 0.95);
+    overflow: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 1500;
+}
+
+#img-loading {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+}

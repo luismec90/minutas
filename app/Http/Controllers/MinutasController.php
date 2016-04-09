@@ -1,7 +1,5 @@
 <?php namespace App\Http\Controllers;
 
-use App\Group;
-use App\Participant;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -46,22 +44,21 @@ class MinutasController extends Controller
 
         $zip = new ZipArchive;
 
-        $zipFileName='files.zip';
+        $zipFileName = 'files.zip';
 
-        if ( $zip->open( $path . '/' . $zipFileName, ZipArchive::CREATE ) === true ) {
+        if ($zip->open($path . '/' . $zipFileName, ZipArchive::CREATE) === true) {
             // Copy all the files from the folder and place them in the archive.
             foreach (glob($path . '/*') as $fileName) {
                 $file = basename($fileName);
                 $zip->addFile($fileName, $file);
             }
-
             $zip->close();
 
-            $pathZip = $path . '/files.zip';
+            $pathZip = $path . '/' . $zipFileName;
 
-            session()->flash('link',$path . '/' . $zipFileName);
+            session()->flash('link', $pathZip);
 
-            return redirect()->back();
+
         }
 
     }
