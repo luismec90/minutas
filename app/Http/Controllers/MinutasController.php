@@ -58,7 +58,7 @@ class MinutasController extends Controller
 
             session()->flash('link', $pathZip);
 
-
+            return redirect()->to('/');
         }
 
     }
