@@ -20,8 +20,8 @@ class MinutasController extends Controller
     public function generate(Request $request)
     {
         $this->validate($request, [
-            'word' => 'required|file',
-            'excel' => 'required|file',
+            'word' => 'required',
+            'excel' => 'required',
         ]);
 
         $data = Excel::load($request->file('excel'), function ($reader) {
@@ -31,7 +31,7 @@ class MinutasController extends Controller
         $i = 1;
 
         $path = "minutas_tmp/tmp_" . time();
-        mkdir($path,0777, true);
+        mkdir($path, 0777, true);
 
         foreach ($data as $row) {
             $template = $request->file('word');
@@ -42,6 +42,10 @@ class MinutasController extends Controller
             $templateProcessor->saveAs("$path/file_$i.docx");
 
             $i++;
+
+            if ($i > 500) {
+                break;
+            }
         }
 
         $zip = new ZipArchive;
@@ -73,13 +77,13 @@ class MinutasController extends Controller
             'message' => 'required',
         ]);
 
-        $data=[
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'userMessage'=>$request->message,
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'userMessage' => $request->message,
         ];
 
-        Mail::send('contact',$data, function ($m) {
+        Mail::send('contact', $data, function ($m) {
             $m->from('info@minutas.co', 'Minutas.co');
 
             $m->to('luismec90@gmail.com', 'Luis M')->subject('minutas.co contacto');
