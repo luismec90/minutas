@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    Route::get('/', 'MinutasController@index');
+    Route::post('/generate', 'MinutasController@generate');
 });
