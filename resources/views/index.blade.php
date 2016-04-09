@@ -156,7 +156,7 @@
                     <div class="thumbnail">
                         <div class="caption">
                             <p class="title">Adjunar archivos</p>
-                            <p>Luego detener los dos archivos requeridos estos se deben adjuntar en el formulario, y proceder a Enviarlo. Luego de procesar los datos el sistema genera un link de descarga. </p>
+                            <p>Luego detener los dos archivos requeridos estos se deben adjuntar en el formulario, y proceder a enviarlo. Luego de procesar los datos el sistema genera un link de descarga. </p>
                             <a href="#main-title" class="btn-default btn1">Ir al formulario</a>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
     <div class="thumb-box1">
         <div class="container">
             <h2 class="center">Contáctenos</h2>
-            <p class="center">Siéntase libre de enviarnos cualquier duda o comentario</p>
+            <p class="center">Siéntase libre de enviarnos cualquier duda o comentario.</p>
             <div class="row">
                 <div class="col-lg-12">
                     <form id="contact-form" class="col-sm-12 contact-form" action="/contact" method="post">
@@ -182,7 +182,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email" class="sr-only"></label>
-                                    <input id="email" name="email" type="email" class="form-control" placeholder="Email" required="required">
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="Correo electrónico " required="required">
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,6 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-success pull-right">Enviar</button>
-                            <a href="#" class="btn btn-danger pull-right contact-reset">Limpiar</a>
                         </div>
                     </form>
                 </div>
