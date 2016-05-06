@@ -37,6 +37,7 @@ class MinutasController extends Controller
             $template = $request->file('word');
             $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($template);
             foreach ($row as $k => $v) {
+                $v = str_replace(' 00:00:00','',$v);
                 $templateProcessor->setValue($k, $v);
             }
             $templateProcessor->saveAs("$path/file_$i.docx");
