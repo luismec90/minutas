@@ -70,6 +70,11 @@ class MinutasController extends Controller
 
     }
 
+    public function lists()
+    {
+        return view('lists');
+    }
+
     public function mail(Request $request)
     {
         $this->validate($request, [
