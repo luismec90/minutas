@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Maatwebsite\Excel\Facades\Excel;
 use ZipArchive;
 
@@ -40,7 +41,10 @@ class MinutasController extends Controller
                 $v = str_replace(' 00:00:00','',$v);
                 $templateProcessor->setValue($k, $v);
             }
-            $templateProcessor->saveAs("$path/file_$i.docx");
+
+            $fileName = empty($row->nombredocumento) ? "file_$i.docx" : Str::slug($row->nombredocumento,'_').'.docx';
+
+            $templateProcessor->saveAs("$path/$fileName");
 
             $i++;
 

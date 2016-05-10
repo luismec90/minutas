@@ -13,6 +13,7 @@
 
 Route::group(['middlewareGroups' => ['web']], function () {
     Route::get('/', 'MinutasController@index');
+    Route::get('/descargas', 'MinutasController@lists');
     Route::post('/generate', 'MinutasController@generate');
     Route::post('/contact', 'MinutasController@mail');
 });
