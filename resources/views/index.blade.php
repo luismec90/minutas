@@ -144,7 +144,7 @@
                     <div class="thumbnail">
                         <div class="caption">
                             <p class="title">Archivo Excel</p>
-                            <p>El propósito de este archivo es tener todos los datos que van a alimentar el archivo en Word. Cada columna debe tener igual número de variables definida en el archivo Word.  Y el nombre de cada una de ellas debe ser el nombre dado a la variable en el archivo Word.</p>
+                            <p>El propósito de este archivo es tener todos los datos que van a alimentar el archivo en Word. Acá se deben definir todas las variables que se crearon en el archivo Word.  Si se desea se puede crear una columna adicional llamda <b>nombreDocumento</b> la cual será usada para nombrar cada uno de los documento creados.</p>
                             <a href="/datos.xlsx" class="btn-default btn1">Descargar Excel de ejemplo</a>
                         </div>
                     </div>
