@@ -11,6 +11,15 @@
 |
 */
 
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/mis-documentos', ['as' => 'user.documents', 'uses' => 'DocumentsController@index']);
+        Route::post('/mis-documentos', ['as' => 'user.documents', 'uses' => 'DocumentsController@store']);
+        Route::post('/document/delete', ['as' => 'user.documents.delete', 'uses' => 'DocumentsController@destroy']);
+    });
+});
+
 Route::group(['middlewareGroups' => ['web']], function () {
     Route::get('/', 'MinutasController@index');
     Route::get('/descargas', 'MinutasController@lists');

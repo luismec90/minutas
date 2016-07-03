@@ -1,11 +1,11 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 @import url(//fonts.googleapis.com/css?family=Passion+One:400,700,900);
 body {
-    background: #c8474f;
     font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.428571429;
     color: #8f8f8f;
 }
+
 a {
     text-decoration: none;
 }
@@ -301,7 +301,22 @@ header.indent {
     background: #f2f2f2;
     position: relative;
 }
+.navbar-default{
+    background: #c8474f;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a {
+    color: #fcf6f6;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fcf6f6;
+    background-color: #e6676f;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fcf6f6;
+}
+
 footer {
+    background: #c8474f;
     padding: 20px 0 12px 0;
 }
 footer p {
